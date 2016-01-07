@@ -19,6 +19,17 @@ ITEM_PIPELINES = {
 }
 DOWNLOAD_DELAY=5
 
+DOWNLOADER_MIDDLEWARES = {
+	# 'scrapyjs.SplashMiddleware': 725,
+	'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware' : None,
+	'appstore.random_useragent.RandomUserAgentMiddleware' : 400,
+	# 'appstore.random_proxy.RandomProxyMiddleware': 100,
+}
+
+SPLASH_URL = 'http://192.168.59.103:8050/'
+DUPEFILTER_CLASS = 'scrapyjs.SplashAwareDupeFilter'
+HTTPCACHE_STORAGE = 'scrapyjs.SplashAwareFSCacheStorage'
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'appstore (+http://www.yourdomain.com)'
 
