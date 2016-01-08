@@ -20,9 +20,9 @@ ITEM_PIPELINES = {
 DOWNLOAD_DELAY=5
 
 DOWNLOADER_MIDDLEWARES = {
-	# 'scrapyjs.SplashMiddleware': 725,
-	'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware' : None,
-	'appstore.random_useragent.RandomUserAgentMiddleware' : 400,
+	'scrapyjs.SplashMiddleware': 725,
+	# 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware' : None,
+	# 'appstore.random_useragent.RandomUserAgentMiddleware' : 400,
 	# 'appstore.random_proxy.RandomProxyMiddleware': 100,
 }
 
